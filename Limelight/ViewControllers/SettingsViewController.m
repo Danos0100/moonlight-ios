@@ -257,8 +257,6 @@ BOOL isCustomResolution(CGSize res) {
     [self.framerateSelector addTarget:self action:@selector(updateBitrate) forControlEvents:UIControlEventValueChanged];
     [self.onscreenControlSelector setSelectedSegmentIndex:onscreenControls];
     [self.onscreenControlSelector setEnabled:!currentSettings.absoluteTouchMode];
-    NSInteger motionMode = [currentSettings.motionMode integerValue];
-    [self.motionModeSelector setSelectedSegmentIndex:motionMode];
     [self.bitrateSlider setMinimumValue:0];
     [self.bitrateSlider setMaximumValue:(sizeof(bitrateTable) / sizeof(*bitrateTable)) - 1];
     [self.bitrateSlider setValue:[self getSliderValueForBitrate:_bitrate] animated:YES];
@@ -548,7 +546,6 @@ BOOL isCustomResolution(CGSize res) {
     NSInteger width = [self getChosenStreamWidth];
     NSInteger audioConfig = [@[@2, @6, @8][[self.audioConfigSelector selectedSegmentIndex]] integerValue];
     NSInteger onscreenControls = [self.onscreenControlSelector selectedSegmentIndex];
-    NSInteger motionMode = [self.motionModeSelector selectedSegmentIndex];
     BOOL optimizeGames = [self.optimizeSettingsSelector selectedSegmentIndex] == 1;
     BOOL multiController = [self.multiControllerSelector selectedSegmentIndex] == 1;
     BOOL swapABXYButtons = [self.swapABXYButtonsSelector selectedSegmentIndex] == 1;
@@ -565,7 +562,6 @@ BOOL isCustomResolution(CGSize res) {
                                width:width
                          audioConfig:audioConfig
                     onscreenControls:onscreenControls
-                          motionMode:motionMode
                        optimizeGames:optimizeGames
                      multiController:multiController
                      swapABXYButtons:swapABXYButtons
