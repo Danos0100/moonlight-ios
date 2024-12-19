@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIView *resolutionDisplayView;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *touchModeSelector;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *onscreenControlSelector;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *motionModeSelector;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *optimizeSettingsSelector;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *multiControllerSelector;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *swapABXYButtonsSelector;
@@ -24,6 +25,7 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *codecSelector;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *hdrSelector;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *framePacingSelector;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *audioConfigSelector;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *btMouseSelector;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *statsOverlaySelector;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
